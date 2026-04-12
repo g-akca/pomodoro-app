@@ -4,7 +4,7 @@ import TimerContainer from "./TimerContainer";
 
 function MainSection() {
   return (
-    <main>
+    <main className="flex flex-col items-center gap-20">
       <TimerContainer />
 
       <button type="button">
