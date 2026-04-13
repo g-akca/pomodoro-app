@@ -4,7 +4,7 @@ function TabContainer() {
   const [mode, setMode] = useState("pomodoro");
 
   return (
-    <div className="self-stretch bg-blue-900 rounded-[31.5px] p-[7.5px] h-15.75">
+    <div className="self-stretch max-w-82.5 bg-blue-900 rounded-[31.5px] p-[7.5px] h-15.75">
       <div
         className={`
           relative h-full grid grid-cols-3 font-bold text-blue-100/40
