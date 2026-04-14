@@ -18,17 +18,17 @@ function TabContainer() {
         `}
       >
         <label className="relative z-10 flex justify-center items-center transition-all delay-100 duration-100 has-checked:text-blue-850">
-          <input type="radio" name="mode" value="pomodoro" onChange={(e) => setMode(e.target.value)} className="hidden peer" defaultChecked />
+          <input type="radio" name="mode" value="pomodoro" onChange={(e) => setMode(e.target.value)} className="hidden" defaultChecked />
           <p className="lowercase">Pomodoro</p>
         </label>
 
         <label className="relative z-10 flex justify-center items-center transition-all delay-100 duration-100 has-checked:text-blue-850">
-          <input type="radio" name="mode" value="short" onChange={(e) => setMode(e.target.value)} className="hidden peer" />
+          <input type="radio" name="mode" value="short" onChange={(e) => setMode(e.target.value)} className="hidden" />
           <p className="lowercase">Short break</p>
         </label>
 
         <label className="relative z-10 flex justify-center items-center transition-all delay-100 duration-100 has-checked:text-blue-850">
-          <input type="radio" name="mode" value="long" onChange={(e) => setMode(e.target.value)} className="hidden peer" />
+          <input type="radio" name="mode" value="long" onChange={(e) => setMode(e.target.value)} className="hidden" />
           <p className="lowercase">Long break</p>
         </label>
       </div>
