@@ -2,12 +2,12 @@ import settingsIcon from "/assets/icon-settings.svg";
 
 import TimerContainer from "./TimerContainer";
 
-function MainSection({ openModal }) {
+function MainSection({ openSettings }) {
   return (
     <main className="flex flex-col items-center gap-20">
       <TimerContainer />
 
-      <button type="button" onClick={openModal}>
+      <button type="button" onClick={openSettings}>
         <img src={settingsIcon} alt="Settings icon" />
       </button>
     </main>

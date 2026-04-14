@@ -2,20 +2,21 @@ import { useState } from "react";
 
 import Header from "./components/Header";
 import MainSection from "./components/MainSection";
-import SettingsModal from "./components/SettingsModal";
+import Settings from "./components/Settings";
 
 function App() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
 
   return (
-    <div className="text-base leading-base bg-blue-850 min-h-screen flex flex-col items-center gap-12 py-8 px-[22.5px]">
-      <Header />
-      
-      <MainSection openModal={() => setIsModalOpen(true)} />
-
-      {isModalOpen && 
-        <SettingsModal closeModal={() => setIsModalOpen(false)} />
-      }
+    <div className={`text-base leading-base min-h-screen py-8 flex flex-col items-center ${isSettingsOpen ? "bg-blue-950 justify-center px-6" : "bg-blue-850 gap-12 px-5.75"}`}>
+      {isSettingsOpen ? ( 
+        <Settings closeSettings={() => setIsSettingsOpen(false)} />
+      ) : (
+        <>
+          <Header />
+          <MainSection openSettings={() => setIsSettingsOpen(true)} />
+        </>
+      )}
     </div>
   )
 }
