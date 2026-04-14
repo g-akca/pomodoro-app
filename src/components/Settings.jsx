@@ -2,6 +2,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 
 import closeIcon from "/assets/icon-close.svg";
+import upIcon from "/assets/icon-arrow-up.svg";
+import downIcon from "/assets/icon-arrow-down.svg";
 
 function Settings({ closeSettings }) {
   return (
@@ -22,19 +24,55 @@ function Settings({ closeSettings }) {
             <div className="flex justify-between items-center">
               <label htmlFor="pomodoro" className="opacity-40 lowercase font-bold">Pomodoro</label>
 
-              <input type="number" className="w-35 h-10 px-4 bg-blue-50 rounded-[10px] text-[13px] leading-base tracking-[3px] font-bold" />
+              <div className="relative w-35">
+                <input type="number" id="pomodoro" className="w-full h-10 pl-4 pr-8 bg-blue-50 rounded-[10px] text-[13px] leading-base tracking-[3px] font-bold" />
+
+                <div className="absolute right-4 top-[9.5px] bottom-[9.5px] flex flex-col justify-between">
+                  <button type="button">
+                    <img src={upIcon} alt="Up icon" />
+                  </button>
+
+                  <button type="button">
+                    <img src={downIcon} alt="Down icon" />
+                  </button>
+                </div>
+              </div>
             </div>
 
             <div className="flex justify-between items-center">
-              <label htmlFor="pomodoro" className="opacity-40 lowercase font-bold">Short break</label>
+              <label htmlFor="short" className="opacity-40 lowercase font-bold">Short break</label>
 
-              <input type="number" className="w-35 h-10 px-4 bg-blue-50 rounded-[10px] text-[13px] leading-base tracking-[3px] font-bold" />
+              <div className="relative w-35">
+                <input type="number" id="short" className="w-full h-10 pl-4 pr-8 bg-blue-50 rounded-[10px] text-[13px] leading-base tracking-[3px] font-bold" />
+
+                <div className="absolute right-4 top-[9.5px] bottom-[9.5px] flex flex-col justify-between">
+                  <button type="button">
+                    <img src={upIcon} alt="Up icon" />
+                  </button>
+
+                  <button type="button">
+                    <img src={downIcon} alt="Down icon" />
+                  </button>
+                </div>
+              </div>
             </div>
 
             <div className="flex justify-between items-center">
-              <label htmlFor="pomodoro" className="opacity-40 lowercase font-bold">Long break</label>
+              <label htmlFor="long" className="opacity-40 lowercase font-bold">Long break</label>
 
-              <input type="number" className="w-35 h-10 px-4 bg-blue-50 rounded-[10px] text-[13px] leading-base tracking-[3px] font-bold" />
+              <div className="relative w-35">
+                <input type="number" id="long" className="w-full h-10 pl-4 pr-8 bg-blue-50 rounded-[10px] text-[13px] leading-base tracking-[3px] font-bold" />
+
+                <div className="absolute right-4 top-[9.5px] bottom-[9.5px] flex flex-col justify-between">
+                  <button type="button">
+                    <img src={upIcon} alt="Up icon" />
+                  </button>
+
+                  <button type="button">
+                    <img src={downIcon} alt="Down icon" />
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
