@@ -14,7 +14,7 @@ function App() {
       <MainSection openModal={() => setIsModalOpen(true)} />
 
       {isModalOpen && 
-        <SettingsModal />
+        <SettingsModal closeModal={() => setIsModalOpen(false)} />
       }
     </div>
   )
