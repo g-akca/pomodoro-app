@@ -1,4 +1,4 @@
-import { useState, useEffect, useLayoutEffect } from "react";
+import { useState, useEffect, useLayoutEffect, useRef } from "react";
 import CircularProgress from "./CircularProgress";
 import { useSettings } from "../context/SettingsContext";
 
@@ -13,19 +13,38 @@ function TimerContainer() {
     setIsRunning(false);
   }, [settings.currentMode, totalSeconds]);
 
+  const animateRef = useRef();
+
   useEffect(() => {
-    if (!isRunning || timeLeft <= 0) return;
-    const interval = setInterval(() => {
+    if (!isRunning || timeLeft <= 0) {
+      if (animateRef.current) cancelAnimationFrame(animateRef.current);
+      return;
+    }
+
+    let lastTime = Date.now();
+
+    const animate = () => {
+      const now = Date.now();
+      const delta = (now - lastTime) / 1000;
+      lastTime = now;
+
       setTimeLeft(prev => {
-        const newTime = prev - 0.1;
+        const newTime = prev - delta;
         if (newTime <= 0) {
           setIsRunning(false);
           return 0;
         }
         return newTime;
       });
-    }, 100);
-    return () => clearInterval(interval);
+
+      animateRef.current = requestAnimationFrame(animate);
+    };
+
+    animateRef.current = requestAnimationFrame(animate);
+
+    return () => {
+      if (animateRef.current) cancelAnimationFrame(animateRef.current);
+    };
   }, [isRunning, timeLeft]);
 
   const displayTime = Math.floor(timeLeft);
