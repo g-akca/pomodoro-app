@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useLayoutEffect } from "react";
 import CircularProgress from "./CircularProgress";
 import { useSettings } from "../context/SettingsContext";
 
@@ -8,7 +8,7 @@ function TimerContainer() {
   const [timeLeft, setTimeLeft] = useState(totalSeconds);
   const [isRunning, setIsRunning] = useState(false);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     setTimeLeft(totalSeconds);
     setIsRunning(false);
   }, [settings.currentMode, totalSeconds]);
@@ -31,7 +31,7 @@ function TimerContainer() {
   const displayTime = Math.floor(timeLeft);
   const minutes = Math.floor(displayTime / 60).toString().padStart(2, '0');
   const seconds = (displayTime % 60).toString().padStart(2, '0');
-  const progress = totalSeconds > 0 ? timeLeft / totalSeconds : 0;
+  const progress = totalSeconds > 0 ? Math.max(0, Math.min(1, timeLeft / totalSeconds)) : 0;
 
   return (
     <div className="h-75 aspect-square p-4 rounded-full bg-linear-275 from-[#2E325A] to-[#0E112A] shadow-[-50px_-50px_100px_#272C5A,50px_50px_100px_#121530]">
