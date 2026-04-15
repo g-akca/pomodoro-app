@@ -10,7 +10,8 @@ export function SettingsProvider({ children }) {
       long: 15
     },
     font: "sans",
-    color: "red"
+    color: "red",
+    currentMode: "pomodoro"
   });
 
   return (

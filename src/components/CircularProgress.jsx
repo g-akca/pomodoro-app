@@ -1,9 +1,9 @@
-function CircularProgress() {
+function CircularProgress({ progress = 0 }) {
   const radius = 124;
   const stroke = 8;
   const normalizedRadius = radius - stroke / 2;
   const circumference = normalizedRadius * 2 * Math.PI;
-  const offset = circumference - 0.84 * circumference;
+  const offset = circumference - progress * circumference;
 
   return (
     <svg width={radius * 2} height={radius * 2} className="-rotate-90 absolute">
