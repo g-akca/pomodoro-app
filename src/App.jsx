@@ -15,8 +15,11 @@ function App() {
       ? "font-mono"
       : "font-sans";
 
+  const tabletFontSize = settings.font === "mono" ? "tablet:text-[13px]" : "tablet:text-[14px]";
+  const tabletLineHeight = settings.font === "mono" ? "tablet:leading-[145%]" : "tablet:leading-[120%]";
+
   return (
-    <div className={`text-base leading-base min-h-screen py-8 flex flex-col justify-center items-center ${fontClass} ${isSettingsOpen ? "bg-blue-950 justify-center px-6" : "bg-blue-850 gap-12 px-5.75"}`}>
+    <div className={`text-base ${tabletFontSize} leading-base ${tabletLineHeight} min-h-screen py-8 tablet:py-10 flex flex-col justify-center items-center ${fontClass} ${isSettingsOpen ? "bg-blue-950 justify-center px-6" : "bg-blue-850 gap-12 tablet:gap-27 px-5.75"}`}>
       {isSettingsOpen ? ( 
         <Settings closeSettings={() => setIsSettingsOpen(false)} />
       ) : (

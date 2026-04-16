@@ -10,7 +10,7 @@ function TabContainer() {
       : "before:bg-red-400";
 
   return (
-    <div className="w-full max-w-82.5 bg-blue-900 rounded-[31.5px] p-[7.5px] h-15.75 z-10">
+    <div className="w-full max-w-82.5 tablet:max-w-95 bg-blue-900 rounded-[31.5px] p-[7.5px] h-15.75 z-10">
       <div
         className={`
           relative h-full grid grid-cols-3 font-bold text-blue-100/40
@@ -18,7 +18,7 @@ function TabContainer() {
           before:rounded-[26.5px] ${tabMarkerColor} before:transition-all before:duration-400
           ${
             settings.currentMode === "pomodoro" ? "before:translate-x-0"
-            : settings.currentMode === "short"? "before:translate-x-full"
+            : settings.currentMode === "short" ? "before:translate-x-full"
             : "before:translate-x-[200%]"
           }
         `}
