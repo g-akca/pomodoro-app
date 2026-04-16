@@ -51,8 +51,8 @@ function Settings({ closeSettings }) {
       : "font-sans";
 
   return (
-    <div className={`bg-white w-full max-w-140 rounded-[15px] flex flex-col gap-4 ${fontClass}`}>
-      <div className="flex justify-between pt-4.5 pb-4 px-6 border-b border-grey-200">
+    <div className={`bg-white w-full max-w-135 rounded-[15px] tablet:rounded-[25px] flex flex-col gap-4 tablet:gap-8 ${fontClass}`}>
+      <div className="flex justify-between pt-4.5 tablet:pt-8.25 pb-4 tablet:pb-8 px-6 tablet:px-9 border-b border-grey-200">
         <h1 className="text-[28px] leading-base font-bold text-blue-900">Settings</h1>
 
         <button type="button" onClick={closeSettings}>
@@ -60,7 +60,7 @@ function Settings({ closeSettings }) {
         </button>
       </div>
 
-      <div className="px-6">
+      <div className="px-6 tablet:px-9">
         <TimeSettings
           localSettings={localSettings}
           setLocalSettings={setLocalSettings}
@@ -79,7 +79,7 @@ function Settings({ closeSettings }) {
 
       <button 
         type="button" 
-        className={`${buttonColor} text-white text-[16px] leading-base font-bold w-35 h-13.25 self-center rounded-[26.5px] translate-y-6.25 -mt-2`}
+        className={`${buttonColor} text-white text-[16px] leading-base font-bold w-35 h-13.25 self-center rounded-[26.5px] translate-y-6.25 -mt-2 tablet:-mt-8`}
         onClick={applySettings}
       >
         Apply

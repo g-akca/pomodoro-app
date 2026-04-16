@@ -4,7 +4,7 @@ import TimerContainer from "./TimerContainer";
 
 function MainSection({ openSettings }) {
   return (
-    <main className="flex flex-col items-center gap-20 tablet:gap-36">
+    <main className="flex flex-col items-center gap-20 tablet:gap-32">
       <TimerContainer />
 
       <button type="button" onClick={openSettings}>

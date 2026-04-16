@@ -3,8 +3,8 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons';
 
 function ColorSettings({ localSettings, setSetting }) {
   return (
-    <div className="pt-6 flex flex-col gap-4">
-      <h2 className="text-blue-900 font-bold text-[11px] leading-3.5 tracking-[4.23px] uppercase text-center">Color</h2>
+    <div className="pt-6 flex flex-col tablet:flex-row tablet:justify-between tablet:items-center gap-4">
+      <h2 className="text-blue-900 font-bold text-[11px] tablet:text-[13px] leading-3.5 tablet:leading-base tracking-[4.23px] tablet:tracking-[5px] uppercase text-center tablet:text-start">Color</h2>
 
       <div className="flex gap-4 justify-center">
         <label className="w-10 aspect-square rounded-full flex justify-center items-center bg-red-400">

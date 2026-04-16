@@ -29,9 +29,9 @@ function TimeSettings({ localSettings, setLocalSettings }) {
 
   return (
     <div className="pb-6 border-b border-grey-200 flex flex-col gap-4">
-      <h2 className="text-blue-900 font-bold text-[11px] leading-3.5 tracking-[4.23px] uppercase text-center">Time (Minutes)</h2>
+      <h2 className="text-blue-900 font-bold text-[11px] tablet:text-[13px] leading-3.5 tablet:leading-base tracking-[4.23px] tablet:tracking-[5px] uppercase text-center tablet:text-start">Time (Minutes)</h2>
 
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-2 tablet:grid tablet:grid-cols-3 tablet:gap-6">
         <DurationInput
           id="pomodoro"
           label="Pomodoro"
