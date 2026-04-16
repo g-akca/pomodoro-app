@@ -52,10 +52,16 @@ function TimerContainer() {
   const seconds = (displayTime % 60).toString().padStart(2, '0');
   const progress = totalSeconds > 0 ? (timeLeft <= 0 ? 1 : Math.max(0, Math.min(1, timeLeft / totalSeconds))) : 0;
 
+  const progressColor = settings.color === "cyan"
+    ? "#70F3F8"
+    : settings.color === "purple"
+      ? "#D881F8"
+      : "#F87070";
+
   return (
     <div className="h-75 aspect-square p-4 rounded-full bg-linear-275 from-[#2E325A] to-[#0E112A] shadow-[-50px_-50px_100px_#272C5A,50px_50px_100px_#121530]">
       <div className="relative w-full h-full p-2.5 bg-blue-900 rounded-full flex items-center justify-center">
-        <CircularProgress progress={progress} />
+        <CircularProgress progress={progress} color={progressColor} />
 
         <div className="text-blue-100 text-center flex flex-col items-center">
           <h2 className="text-[80px] leading-base font-bold tracking-[-5px]">{minutes}:{seconds}</h2>

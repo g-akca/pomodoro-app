@@ -3,13 +3,19 @@ import { useSettings } from "../context/SettingsContext";
 function TabContainer() {
   const { settings, setSettings } = useSettings();
 
+  const tabMarkerColor = settings.color === "cyan"
+    ? "before:bg-cyan-300"
+    : settings.color === "purple"
+      ? "before:bg-purple-400"
+      : "before:bg-red-400";
+
   return (
     <div className="w-full max-w-82.5 bg-blue-900 rounded-[31.5px] p-[7.5px] h-15.75 z-10">
       <div
         className={`
           relative h-full grid grid-cols-3 font-bold text-blue-100/40
           before:content-[''] before:absolute before:top-0 before:left-0 before:h-12 before:w-1/3 
-          before:rounded-[26.5px] before:bg-red-400 before:transition-all before:duration-400
+          before:rounded-[26.5px] ${tabMarkerColor} before:transition-all before:duration-400
           ${
             settings.currentMode === "pomodoro" ? "before:translate-x-0"
             : settings.currentMode === "short"? "before:translate-x-full"

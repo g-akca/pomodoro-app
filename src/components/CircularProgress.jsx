@@ -1,4 +1,4 @@
-function CircularProgress({ progress = 0 }) {
+function CircularProgress({ progress = 0, color = "#F87070" }) {
   const radius = 124;
   const stroke = 8;
   const normalizedRadius = radius - stroke / 2;
@@ -8,7 +8,7 @@ function CircularProgress({ progress = 0 }) {
   return (
     <svg width={radius * 2} height={radius * 2} className="-rotate-90 absolute">
       <circle
-        stroke="#F87070"
+        stroke={color}
         fill="transparent"
         strokeWidth={stroke}
         strokeDasharray={circumference}
