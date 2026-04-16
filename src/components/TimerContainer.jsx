@@ -58,13 +58,19 @@ function TimerContainer() {
       ? "#D881F8"
       : "#F87070";
 
+  const h2Classes = settings.font === "serif"
+    ? "text-[80px] leading-[133%] font-bold"
+    : settings.font === "mono"
+      ? "text-[80px] leading-base tracking-[-10px]"
+      : "text-[80px] leading-base font-bold tracking-[-5px]";
+
   return (
     <div className="h-75 aspect-square p-4 rounded-full bg-linear-275 from-[#2E325A] to-[#0E112A] shadow-[-50px_-50px_100px_#272C5A,50px_50px_100px_#121530]">
       <div className="relative w-full h-full p-2.5 bg-blue-900 rounded-full flex items-center justify-center">
         <CircularProgress progress={progress} color={progressColor} />
 
         <div className="text-blue-100 text-center flex flex-col items-center">
-          <h2 className="text-[80px] leading-base font-bold tracking-[-5px]">{minutes}:{seconds}</h2>
+          <h2 className={h2Classes}>{minutes}:{seconds}</h2>
           <button type="button" onClick={() => {
             if (timeLeft <= 0) {
               setTimeLeft(totalSeconds);
