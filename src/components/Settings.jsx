@@ -66,8 +66,20 @@ function Settings({ closeSettings }) {
     closeSettings();
   }
 
+  const buttonColor = localSettings.color === "cyan"
+    ? "bg-cyan-300"
+    : localSettings.color === "purple"
+      ? "bg-purple-400"
+      : "bg-red-400";
+
+  const fontClass = localSettings.font === "serif"
+    ? "font-serif"
+    : localSettings.font === "mono"
+      ? "font-mono"
+      : "font-sans";
+
   return (
-    <div className="bg-white w-full max-w-140 rounded-[15px] flex flex-col gap-4">
+    <div className={`bg-white w-full max-w-140 rounded-[15px] flex flex-col gap-4 ${fontClass}`}>
       <div className="flex justify-between pt-4.5 pb-4 px-6 border-b border-grey-200">
         <h1 className="text-[28px] leading-base font-bold text-blue-900">Settings</h1>
 
@@ -245,7 +257,7 @@ function Settings({ closeSettings }) {
 
       <button 
         type="button" 
-        className="bg-red-400 text-white text-[16px] leading-base font-bold w-35 h-13.25 self-center rounded-[26.5px] translate-y-6.25 -mt-2"
+        className={`${buttonColor} text-white text-[16px] leading-base font-bold w-35 h-13.25 self-center rounded-[26.5px] translate-y-6.25 -mt-2`}
         onClick={applySettings}
       >
         Apply
