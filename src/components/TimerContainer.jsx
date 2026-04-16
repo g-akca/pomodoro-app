@@ -17,22 +17,22 @@ function TimerContainer() {
       : "#F87070";
 
   const h2Classes = settings.font === "serif"
-    ? "text-[80px] leading-[133%] font-bold"
+    ? "text-[80px] leading-[133%] font-bold tablet:text-[100px] tablet:leading-[130%]"
     : settings.font === "mono"
-      ? "text-[80px] leading-base tracking-[-10px]"
-      : "text-[80px] leading-base font-bold tracking-[-5px]";
+      ? "text-[80px] leading-base tracking-[-10px] -translate-x-1 tablet:text-[100px] tablet:leading-[150%]"
+      : "text-[80px] leading-base font-bold tracking-[-5px] tablet:text-[100px]";
 
   return (
-    <div className="h-75 aspect-square p-4 rounded-full bg-linear-275 from-[#2E325A] to-[#0E112A] shadow-[-50px_-50px_100px_#272C5A,50px_50px_100px_#121530]">
+    <div className="h-75 tablet:h-102.5 aspect-square p-4 tablet:p-5.5 rounded-full bg-linear-275 from-[#2E325A] to-[#0E112A] shadow-[-50px_-50px_100px_#272C5A,50px_50px_100px_#121530]">
       <div className="relative w-full h-full p-2.5 bg-blue-900 rounded-full flex items-center justify-center">
         <CircularProgress progress={progress} color={progressColor} />
 
-        <div className="text-blue-100 text-center flex flex-col items-center">
+        <div className="text-blue-100 text-center flex flex-col items-center tablet:gap-2">
           <h2 className={h2Classes}>{minutes}:{seconds}</h2>
           <button
             type="button"
             onClick={toggleTimer}
-            className="translate-x-[7.5px] text-[14px] leading-[120%] tracking-[13px] font-bold uppercase"
+            className="translate-x-[7.5px] text-[14px] tablet:text-[16px] leading-[120%] tablet:leading-base tracking-[13px] tablet:tracking-[15px] font-bold uppercase"
           >
             {isRunning ? "Pause" : (timeLeft <= 0 ? "Restart" : "Start")}
           </button>
