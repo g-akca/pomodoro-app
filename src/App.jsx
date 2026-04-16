@@ -19,7 +19,7 @@ function App() {
   const tabletLineHeight = settings.font === "mono" ? "tablet:leading-[145%]" : "tablet:leading-[120%]";
 
   return (
-    <div className={`text-base ${tabletFontSize} leading-base ${tabletLineHeight} min-h-screen py-8 tablet:py-10 flex flex-col justify-center items-center ${fontClass} ${isSettingsOpen ? "bg-blue-950 justify-center px-6" : "bg-blue-850 gap-12 tablet:gap-27 px-5.75"}`}>
+    <div className={`text-base ${tabletFontSize} leading-base ${tabletLineHeight} min-h-screen py-8 tablet:py-10 desktop:py-12 flex flex-col justify-center items-center ${fontClass} ${isSettingsOpen ? "bg-blue-950 justify-center px-6" : "bg-blue-850 gap-12 tablet:gap-27 desktop:gap-9 px-5.75"}`}>
       {isSettingsOpen ? ( 
         <Settings closeSettings={() => setIsSettingsOpen(false)} />
       ) : (
