@@ -32,7 +32,8 @@ function TimerContainer() {
           <button
             type="button"
             onClick={toggleTimer}
-            className="translate-x-[7.5px] text-[14px] tablet:text-[16px] leading-[120%] tablet:leading-base tracking-[13px] tablet:tracking-[15px] font-bold uppercase"
+            style={{ "--progress-color": progressColor }}
+            className="translate-x-[7.5px] text-[14px] tablet:text-[16px] leading-[120%] tablet:leading-base tracking-[13px] tablet:tracking-[15px] font-bold uppercase cursor-pointer transition-all duration-300 hover:text-(--progress-color)"
           >
             {isRunning ? "Pause" : (timeLeft <= 0 ? "Restart" : "Start")}
           </button>
