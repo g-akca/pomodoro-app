@@ -17,11 +17,11 @@ function DurationInput({ id, label, value, onChange, onIncrement, onDecrement })
         />
 
         <div className="absolute right-4 top-2.5 bottom-2.5 tablet:top-3.25 tablet:bottom-3.25 flex flex-col justify-between">
-          <button type="button" onClick={onIncrement}>
+          <button type="button" onClick={onIncrement} aria-label="Increment">
             <UpIcon className="cursor-pointer transition-all duration-300 text-grey-400 hover:text-blue-850" />
           </button>
 
-          <button type="button" onClick={onDecrement}>
+          <button type="button" onClick={onDecrement} aria-label="Decrement">
             <DownIcon className="cursor-pointer transition-all duration-300 text-grey-400 hover:text-blue-850" />
           </button>
         </div>

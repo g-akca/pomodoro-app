@@ -61,7 +61,7 @@ function Settings({ closeSettings }) {
       <div className="flex justify-between pt-4.5 tablet:pt-8.25 pb-4 tablet:pb-8 px-6 tablet:px-9 border-b border-grey-200">
         <h1 className="text-[28px] leading-base font-bold text-blue-900">Settings</h1>
 
-        <button type="button" onClick={closeSettings}>
+        <button type="button" onClick={closeSettings} aria-label="Close">
           <CloseIcon className="text-blue-850 cursor-pointer transition-all duration-300 hover:text-[#979797]" />
         </button>
       </div>

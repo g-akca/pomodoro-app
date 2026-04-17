@@ -13,7 +13,7 @@ function MainSection({ openSettings }) {
     >
       <TimerContainer />
 
-      <button type="button" onClick={openSettings}>
+      <button type="button" onClick={openSettings} aria-label="Settings">
         <SettingsIcon className="cursor-pointer transition-all duration-300 text-blue-100 opacity-50 hover:opacity-100" />
       </button>
     </motion.main>
