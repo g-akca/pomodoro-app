@@ -79,7 +79,7 @@ function Settings({ closeSettings }) {
 
       <button 
         type="button" 
-        className={`${buttonColor} text-white text-[16px] leading-base font-bold w-35 h-13.25 self-center rounded-[26.5px] translate-y-6.25 -mt-2 tablet:-mt-8`}
+        className={`${buttonColor} text-white text-[16px] leading-base font-bold w-35 h-13.25 self-center cursor-pointer rounded-[26.5px] translate-y-6.25 -mt-2 tablet:-mt-8`}
         onClick={applySettings}
       >
         Apply

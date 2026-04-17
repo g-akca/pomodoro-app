@@ -1,5 +1,5 @@
-import upIcon from "/assets/icon-arrow-up.svg";
-import downIcon from "/assets/icon-arrow-down.svg";
+import UpIcon from "./icons/UpIcon";
+import DownIcon from "./icons/DownIcon";
 
 function DurationInput({ id, label, value, onChange, onIncrement, onDecrement }) {
   return (
@@ -18,11 +18,11 @@ function DurationInput({ id, label, value, onChange, onIncrement, onDecrement })
 
         <div className="absolute right-4 top-2.5 bottom-2.5 tablet:top-3.25 tablet:bottom-3.25 flex flex-col justify-between">
           <button type="button" onClick={onIncrement}>
-            <img src={upIcon} alt="Up icon" />
+            <UpIcon className="cursor-pointer transition-all duration-300 text-grey-400 hover:text-blue-850" />
           </button>
 
           <button type="button" onClick={onDecrement}>
-            <img src={downIcon} alt="Down icon" />
+            <DownIcon className="cursor-pointer transition-all duration-300 text-grey-400 hover:text-blue-850" />
           </button>
         </div>
       </div>
