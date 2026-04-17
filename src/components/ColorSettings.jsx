@@ -14,7 +14,7 @@ function ColorSettings({ localSettings, setSetting }) {
             value="red"
             checked={localSettings.color === "red"}
             onChange={() => setSetting("color", "red")}
-            className="hidden peer"
+            className="sr-only peer"
           />
           <FontAwesomeIcon icon={faCheck} className="opacity-0 peer-checked:opacity-100 text-[16px]" />
         </label>
@@ -26,7 +26,7 @@ function ColorSettings({ localSettings, setSetting }) {
             value="cyan"
             checked={localSettings.color === "cyan"}
             onChange={() => setSetting("color", "cyan")}
-            className="hidden peer"
+            className="sr-only peer"
           />
           <FontAwesomeIcon icon={faCheck} className="opacity-0 peer-checked:opacity-100 text-[16px]" />
         </label>
@@ -38,7 +38,7 @@ function ColorSettings({ localSettings, setSetting }) {
             value="purple"
             checked={localSettings.color === "purple"}
             onChange={() => setSetting("color", "purple")}
-            className="hidden peer"
+            className="sr-only peer"
           />
           <FontAwesomeIcon icon={faCheck} className="opacity-0 peer-checked:opacity-100 text-[16px]" />
         </label>

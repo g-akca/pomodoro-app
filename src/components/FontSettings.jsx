@@ -11,7 +11,7 @@ function FontSettings({ localSettings, setSetting }) {
             value="sans"
             checked={localSettings.font === "sans"}
             onChange={() => setSetting("font", "sans")}
-            className="hidden"
+            className="sr-only"
           />
           <p>Aa</p>
         </label>
@@ -23,7 +23,7 @@ function FontSettings({ localSettings, setSetting }) {
             value="serif"
             checked={localSettings.font === "serif"}
             onChange={() => setSetting("font", "serif")}
-            className="hidden"
+            className="sr-only"
           />
           <p>Aa</p>
         </label>
@@ -35,7 +35,7 @@ function FontSettings({ localSettings, setSetting }) {
             value="mono"
             checked={localSettings.font === "mono"}
             onChange={() => setSetting("font", "mono")}
-            className="hidden"
+            className="sr-only"
           />
           <p>Aa</p>
         </label>
