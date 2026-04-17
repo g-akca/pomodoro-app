@@ -11,7 +11,7 @@ function TabContainer() {
 
   return (
     <div className="w-full max-w-82.5 tablet:max-w-95 bg-blue-900 rounded-[31.5px] p-[7.5px] h-15.75 z-10">
-      <div
+      <fieldset
         className={`
           relative h-full grid grid-cols-3 font-bold text-blue-100/40
           before:content-[''] before:absolute before:top-0 before:left-0 before:h-12 before:w-1/3 
@@ -23,6 +23,8 @@ function TabContainer() {
           }
         `}
       >
+        <legend class="sr-only">Choose a mode</legend>
+
         <label className="relative z-10 flex justify-center items-center transition-all delay-100 duration-10 cursor-pointer has-checked:text-blue-850 hover:text-blue-100">
           <input type="radio" name="mode" value="pomodoro" onChange={(e) => setSettings(prev => ({...prev, currentMode: e.target.value}))} className="sr-only" checked={settings.currentMode === "pomodoro"} />
           <span className="lowercase">Pomodoro</span>
@@ -37,7 +39,7 @@ function TabContainer() {
           <input type="radio" name="mode" value="long" onChange={(e) => setSettings(prev => ({...prev, currentMode: e.target.value}))} className="sr-only" checked={settings.currentMode === "long"} />
           <span className="lowercase">Long break</span>
         </label>
-      </div>
+      </fieldset>
     </div>
   )
 }

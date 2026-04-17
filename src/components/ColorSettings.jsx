@@ -6,7 +6,9 @@ function ColorSettings({ localSettings, setSetting }) {
     <div className="pt-6 flex flex-col tablet:flex-row tablet:justify-between tablet:items-center gap-4">
       <h2 className="text-blue-900 font-bold text-[11px] tablet:text-[13px] leading-3.5 tablet:leading-base tracking-[4.23px] tablet:tracking-[5px] uppercase text-center tablet:text-start">Color</h2>
 
-      <div className="flex gap-4 justify-center">
+      <fieldset className="flex gap-4 justify-center">
+        <legend class="sr-only">Choose a color</legend>
+
         <label className="w-10 aspect-square rounded-full flex justify-center items-center bg-red-400 cursor-pointer transition-all duration-300 hover:ring-1 hover:ring-blue-50 hover:ring-offset-[5px]">
           <input
             type="radio"
@@ -42,7 +44,7 @@ function ColorSettings({ localSettings, setSetting }) {
           />
           <FontAwesomeIcon icon={faCheck} className="opacity-0 peer-checked:opacity-100 text-[16px]" />
         </label>
-      </div>
+      </fieldset>
     </div>
   );
 }
