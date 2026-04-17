@@ -24,17 +24,17 @@ function TabContainer() {
         `}
       >
         <label className="relative z-10 flex justify-center items-center transition-all delay-100 duration-10 cursor-pointer has-checked:text-blue-850 hover:text-blue-100">
-          <input type="radio" name="mode" value="pomodoro" onChange={(e) => setSettings(prev => ({...prev, currentMode: e.target.value}))} className="hidden" checked={settings.currentMode === "pomodoro"} />
+          <input type="radio" name="mode" value="pomodoro" onChange={(e) => setSettings(prev => ({...prev, currentMode: e.target.value}))} className="sr-only" checked={settings.currentMode === "pomodoro"} />
           <span className="lowercase">Pomodoro</span>
         </label>
 
         <label className="relative z-10 flex justify-center items-center transition-all delay-100 duration-100 cursor-pointer has-checked:text-blue-850 hover:text-blue-100">
-          <input type="radio" name="mode" value="short" onChange={(e) => setSettings(prev => ({...prev, currentMode: e.target.value}))} className="hidden" checked={settings.currentMode === "short"} />
+          <input type="radio" name="mode" value="short" onChange={(e) => setSettings(prev => ({...prev, currentMode: e.target.value}))} className="sr-only" checked={settings.currentMode === "short"} />
           <span className="lowercase">Short break</span>
         </label>
 
         <label className="relative z-10 flex justify-center items-center transition-all delay-100 duration-100 cursor-pointer has-checked:text-blue-850 hover:text-blue-100">
-          <input type="radio" name="mode" value="long" onChange={(e) => setSettings(prev => ({...prev, currentMode: e.target.value}))} className="hidden" checked={settings.currentMode === "long"} />
+          <input type="radio" name="mode" value="long" onChange={(e) => setSettings(prev => ({...prev, currentMode: e.target.value}))} className="sr-only" checked={settings.currentMode === "long"} />
           <span className="lowercase">Long break</span>
         </label>
       </div>
