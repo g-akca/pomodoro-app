@@ -1,5 +1,3 @@
-import settingsIcon from "/assets/icon-settings.svg";
-
 import TimerContainer from "./TimerContainer";
 import SettingsIcon from "./icons/SettingsIcon";
 
