@@ -13,7 +13,7 @@ function FontSettings({ localSettings, setSetting }) {
             onChange={() => setSetting("font", "sans")}
             className="sr-only"
           />
-          <p>Aa</p>
+          <span>Aa</span>
         </label>
 
         <label className="w-10 aspect-square rounded-full flex justify-center items-center bg-blue-50 font-serif has-checked:bg-blue-900 has-checked:text-white cursor-pointer transition-all duration-300 hover:ring-1 hover:ring-blue-50 hover:ring-offset-[5px]">
@@ -25,7 +25,7 @@ function FontSettings({ localSettings, setSetting }) {
             onChange={() => setSetting("font", "serif")}
             className="sr-only"
           />
-          <p>Aa</p>
+          <span>Aa</span>
         </label>
 
         <label className="w-10 aspect-square rounded-full flex justify-center items-center bg-blue-50 font-mono font-bold has-checked:bg-blue-900 has-checked:text-white cursor-pointer transition-all duration-300 hover:ring-1 hover:ring-blue-50 hover:ring-offset-[5px]">
@@ -37,7 +37,7 @@ function FontSettings({ localSettings, setSetting }) {
             onChange={() => setSetting("font", "mono")}
             className="sr-only"
           />
-          <p>Aa</p>
+          <span>Aa</span>
         </label>
       </div>
     </div>
