@@ -1,5 +1,6 @@
 import { useSettings } from "/src/context/SettingsContext.jsx";
 import { useState } from 'react';
+import { motion } from "framer-motion";
 
 import TimeSettings from './TimeSettings';
 import FontSettings from './FontSettings';
@@ -51,7 +52,12 @@ function Settings({ closeSettings }) {
       : "font-sans";
 
   return (
-    <div className={`bg-white w-full max-w-135 rounded-[15px] tablet:rounded-[25px] flex flex-col gap-4 tablet:gap-8 ${fontClass}`}>
+    <motion.div 
+      className={`bg-white w-full max-w-135 rounded-[15px] tablet:rounded-[25px] flex flex-col gap-4 tablet:gap-8 ${fontClass}`}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.3 }}
+    >
       <div className="flex justify-between pt-4.5 tablet:pt-8.25 pb-4 tablet:pb-8 px-6 tablet:px-9 border-b border-grey-200">
         <h1 className="text-[28px] leading-base font-bold text-blue-900">Settings</h1>
 
@@ -84,7 +90,7 @@ function Settings({ closeSettings }) {
       >
         Apply
       </button>
-    </div>
+    </motion.div>
   )
 }
 

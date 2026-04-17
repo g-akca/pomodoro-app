@@ -1,9 +1,9 @@
 import { useState } from "react";
+import { useSettings } from "./context/SettingsContext.jsx";
 
 import Header from "./components/Header";
 import MainSection from "./components/MainSection";
 import Settings from "./components/Settings";
-import { useSettings } from "./context/SettingsContext.jsx";
 
 function App() {
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
