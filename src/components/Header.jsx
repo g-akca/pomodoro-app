@@ -11,6 +11,7 @@ function Header() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.1 }}
     >
+      <h1 class="sr-only">Pomodoro App</h1>
       <img src={logoImg} alt="Pomodoro logo" className="h-7 tablet:h-10" />
 
       <TabContainer />
