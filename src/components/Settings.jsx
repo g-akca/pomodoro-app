@@ -54,8 +54,10 @@ function Settings({ closeSettings }) {
   return (
     <motion.div 
       className={`bg-white w-full max-w-135 rounded-[15px] tablet:rounded-[25px] flex flex-col gap-4 tablet:gap-8 ${fontClass}`}
+      key="settings"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: 20 }}
       transition={{ duration: 0.3 }}
     >
       <div className="flex justify-between pt-4.5 tablet:pt-8.25 pb-4 tablet:pb-8 px-6 tablet:px-9 border-b border-grey-200">
