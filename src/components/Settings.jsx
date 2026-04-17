@@ -1,10 +1,10 @@
-import closeIcon from "/assets/icon-close.svg";
-
 import { useSettings } from "/src/context/SettingsContext.jsx";
 import { useState } from 'react';
+
 import TimeSettings from './TimeSettings';
 import FontSettings from './FontSettings';
 import ColorSettings from './ColorSettings';
+import CloseIcon from "./icons/CloseIcon";
 
 function Settings({ closeSettings }) {
   const {settings, setSettings} = useSettings();
@@ -56,7 +56,7 @@ function Settings({ closeSettings }) {
         <h1 className="text-[28px] leading-base font-bold text-blue-900">Settings</h1>
 
         <button type="button" onClick={closeSettings}>
-          <img src={closeIcon} alt="Close icon" />
+          <CloseIcon className="text-blue-850 cursor-pointer transition-all duration-300 hover:text-[#979797]" />
         </button>
       </div>
 
