@@ -1,6 +1,7 @@
 import settingsIcon from "/assets/icon-settings.svg";
 
 import TimerContainer from "./TimerContainer";
+import SettingsIcon from "./icons/SettingsIcon";
 
 function MainSection({ openSettings }) {
   return (
@@ -8,7 +9,7 @@ function MainSection({ openSettings }) {
       <TimerContainer />
 
       <button type="button" onClick={openSettings}>
-        <img src={settingsIcon} alt="Settings icon" />
+        <SettingsIcon className="cursor-pointer transition-all duration-300 text-blue-100 opacity-50 hover:opacity-100" />
       </button>
     </main>
   )
